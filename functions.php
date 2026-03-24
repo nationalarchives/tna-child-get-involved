@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 function tnatheme_globals() {
     global $pre_path;
     global $pre_crumbs;
     $headers = apache_request_headers();
-    if ( isset($_SERVER['HTTP_X_NGINX_PROXY']) && isset($headers['X_HOST_TYPE']) && $headers['X_HOST_TYPE'] == 'public' ) {
+    if ( isset($_SERVER['HTTP_X_NGINX_PROXY']) && isset($headers['X-Host-Type']) && $headers['X-Host-Type'] == 'public' ) {
         $pre_crumbs = array(
             'About us' => '/about/',
             'Get involved' => '/about/get-involved/'
